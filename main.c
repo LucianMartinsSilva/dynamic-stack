@@ -63,10 +63,10 @@ int pop(Stack *stack) {
         return INT_MIN;
     }
 
-    StackNode *temporaryNode = stack->top;
+    StackNode *poppedStackNode = stack->top;
     stack->top = stack->top->nextStackNode;
-    int poppedData = temporaryNode->data;
-    free(temporaryNode);
+    int poppedData = poppedStackNode->data;
+    free(poppedStackNode);
 
     return poppedData;
 }
