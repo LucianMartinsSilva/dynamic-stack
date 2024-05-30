@@ -82,6 +82,7 @@ int peek(Stack *stack) {
     }
     return stack->top->data;
 }
+
 int main(void) {
     Stack *stack = createStack();
     push(stack, 11);
